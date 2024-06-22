@@ -1,0 +1,187 @@
+
+
+html, body {
+    height: 100%;
+    font-size: 14px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E5DFDA;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #E7D8C9;
+}
+
+.navbar a {
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-bottom: 2px solid pink;
+}
+
+.hero {
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    animation: fadeInUp 2s ease-in-out;
+    color: black;
+}
+
+.hero h1:first-of-type {
+    color: white;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/*my hobby*/
+
+html, body {
+    height: 100%;
+    font-size: 14px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E5DFDA;
+}
+
+
+.hobby-section {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5DFDA;
+    padding: 20px;  
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+
+.card {
+    position: relative;
+    list-style: none;
+    width: 360px;
+    height: 300px;     
+    border-radius: 20px;
+    overflow: hidden;  
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);  
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-size: cover; 
+    background-position: center;
+    filter: brightness(.9) saturate(1) contrast(1);
+    transition: filter .3s ease;
+}
+
+.card:hover .card-background {
+    transform: scale(1.05);  
+backgroun-size: 260px;
+}
+
+
+.card-container: hover .card:not(:hover) {
+ transform: scale(.9);
+}
+
+.card-container:hover > .card:not(:hover) .card-background,
+.card-container:hover > .card:not(:hover) .card-category {
+ filter: brightness(.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.card-category {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card-heading {
+    font-size: 18px;
+    margin: 0;
+ color: white;
+line-height: 1;
+text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+/*about me*/
+
+.image {
+position: absolute;
+background-size: cover;
+}
