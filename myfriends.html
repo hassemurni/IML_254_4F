@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name+"viewport" content="width=device-width, initial-scale=1.0">
+<title> MY FRIENDS </title>
+
+</head>
+<nav class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="aboutme.html">ABOUT ME</a>
+    <a href="myself.html">MY SELF</a>
+    <a href="myhobby.html">HOBBY</a>
+    <a href="myfriends.html">FRIENDS</a>
+    <a href="myfamily.html">FAMILY</a>
+    <a href="interest.html">INTEREST</a>
+</nav>
+
+<body>
+
+<div class="box">
+
+	<span style="--i:1"><img src="resource/image/myfriends/friends_1.jpg"></span>
+	<span style="--i:2"><img src="resource/image/myfriends/friends_2.jpg"></span>
+	<span style="--i:3"><img src="resource/image/myfriends/friends_3.jpg"></span>
+	<span style="--i:4"><img src="resource/image/myfriends/friends_4.jpg"></span>
+	<span style="--i:5"><img src="resource/image/myfriends/friends_5.jpg"></span>
+	<span style="--i:6"><img src="resource/image/myfriends/friends_6.jpg"></span>
+	<span style="--i:7"><img src="resource/image/myfriends/friends_7.jpg"></span>
+	<span style="--i:8"><img src="resource/image/myfriends/friends_8.jpg"></span>
+	<span style="--i:9"><img src="resource/image/myfriends/friends_9.jpg"></span>
+	<span style="--i:10"><img src="resource/image/myfriends/friends_10.jpg"></span>
+</body>
+</html>
+
+<style>
+ html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+background-color: #E5DFDA;
+ }
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #E7D8C9;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: flex;
+	
+}
+
+.navbar a:hover {
+background-color: #575757;
+border-bottom: 2px solid pink;
+}
+
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+
+}
+
+.box:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes animate {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 36deg)) translateZ(450px);
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.267));
+}
+
+
+
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 15px;
+    border: 4px double rgb(0, 0, 0);
+}
+
+img:hover{
+    transform: translateY(-2px);
+    
+}
+</style>

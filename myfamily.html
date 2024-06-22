@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <link rel="stylesheet" href="resource/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="aboutme.html">ABOUT ME</a>
+        <a href="myself.html">MY SELF</a>
+        <a href="myhobby.html">HOBBY</a>
+        <a href="myfriends.html">FRIENDS</a>
+        <a href="myfamily.html">FAMILY</a>
+        <a href="interest.html">INTEREST</a>
+    </nav>
+
+    <div class="hasse">
+      
+        <div class="row">
+            <div class="col">
+                <div class="minah-img">
+                    <img src="resource/image/myfamily/family_3.jpg" width="100%">
+                    <img src="resource/image/icon_play.jpeg" class="play-btn" onclick="playVideo('resource/video/family1.mp4')">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="resource/image/myfamily/family_2.jpg" alt="">
+                        <img src="resource/image/icon_play.jpeg" class="play-btn" onclick="playVideo('resource/video/family2.mp4')">
+                    </div>
+                    <p>My fambam is all about that cozy camping life - or should I say, glamping extravaganza! From staycations to togetherness galore, we're a squad of adventurers. Check out this sneak peek of our February camping shenanigans. It was an absolute blast!</p>
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="resource/image/myfamily/family_6.jpg" alt="">
+                        <img src="resource/image/icon_play.jpeg" class="play-btn" onclick="playVideo('resource/video/family_3.mp4')">
+                    </div>
+                    <p>In this fun video, we're tackling the challenge of setting up a tent for the whole gang! With my ten siblings in tow, rallying the troops is no small feat, but hey, family teamwork makes the dream work!</p>
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="resource/image/myfamily/family_4jpg.jpg" alt="">
+                        <img src="resource/image/icon_play.jpeg" class="play-btn" onclick="playVideo('resource/video/family4.mp4')">
+                    </div>
+                    <p>Here's a little treat for you guys - a sneak peek into our wild river adventure! Watch me and my sis dive into the waters with pure excitement. After drowning in assignments all semester, this was our ultimate stress-buster. With a shared love for nature, we're all about exploring until our very last breath!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoplayer">
+        <video width="100%" controls autoplay id="myvideo">
+            <source src="" type="video/mp4">
+        </video>
+        <img src="resource/image/close_icon.jpg" class="close-btn" onclick="stopVideo()">
+    </div>
+
+    <script>
+        var videoplayer = document.getElementById("videoplayer");
+        var myvideo = document.getElementById("myvideo");
+
+        function stopVideo(){
+            videoplayer.style.display = "none";
+            myvideo.pause();
+        }
+
+        function playVideo(file){
+            myvideo.src = file;
+            videoplayer.style.display = "block";
+            myvideo.play();
+        }
+    </script>
+</body>
+</html>
+
